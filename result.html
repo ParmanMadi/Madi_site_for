@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>Результаты</title>
+</head>
+<body>
+    {% if correct %}
+    <h1 class="header">Правильный ответ!</h1>
+    <a href="/test">Следущий вопрос</a>
+    {% else %}
+    <h1 class="header">Неправильный ответ!</h1>
+    <a href="/">Начать занаво</a>
+    {% endif %}
+</body>
+</html>
